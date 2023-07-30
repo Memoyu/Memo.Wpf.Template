@@ -7,6 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid>
-        <TextBlock FontSize="28" Text="DashboardPage" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Margin="20,10"
+            FontSize="28"
+            Text="DashboardPage" />
+        <Border Grid.Row="1">
+            <Button
+                Command="{Binding ViewModel.WriteToLogClickCommand}"
+                Content="写入日志"
+                Style="{StaticResource ButtonSuccess}" />
+        </Border>
     </Grid>
 </Page>
