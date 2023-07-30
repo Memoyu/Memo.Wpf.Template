@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33920.267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3D9AE2D-FA1B-4049-93DF-934F24501E27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionItems", "{680411D9-19BF-4C75-981A-9E745A8BC284}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandyControl", "HandyControl", "{41EEE88B-0DAB-4687-B107-43C0AEF10884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpfui", "Wpfui", "{EB28424F-2F8E-4700-9DA5-3E29916DA291}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandyControl.Template", "src\HandyControl\Template\HandyControl.Template.csproj", "{89B5774A-8C2F-4931-A530-8FB18DC35404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89B5774A-8C2F-4931-A530-8FB18DC35404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B5774A-8C2F-4931-A530-8FB18DC35404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B5774A-8C2F-4931-A530-8FB18DC35404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B5774A-8C2F-4931-A530-8FB18DC35404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{41EEE88B-0DAB-4687-B107-43C0AEF10884} = {C3D9AE2D-FA1B-4049-93DF-934F24501E27}
+		{EB28424F-2F8E-4700-9DA5-3E29916DA291} = {C3D9AE2D-FA1B-4049-93DF-934F24501E27}
+		{89B5774A-8C2F-4931-A530-8FB18DC35404} = {41EEE88B-0DAB-4687-B107-43C0AEF10884}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91B64D3F-E72D-43B5-918C-1B25685C361A}
+	EndGlobalSection
+EndGlobal
