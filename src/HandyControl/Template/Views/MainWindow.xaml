@@ -45,14 +45,27 @@
         </ResourceDictionary>
     </hc:Window.Resources>
     <hc:Window.NonClientAreaContent>
-        <StackPanel Height="29">
+        <StackPanel VerticalAlignment="Stretch" Orientation="Horizontal">
+            <Border
+                Margin="10,0,0,0"
+                Padding="10,4"
+                VerticalAlignment="Center"
+                Background="{DynamicResource SolidBackgroundFillColorSecondaryBrush}"
+                CornerRadius="2">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                    Text="{Binding ViewModel.Title}" />
+            </Border>
             <Menu HorizontalAlignment="Left">
-                <MenuItem Header="参数">
-                    <MenuItem Header="Header1" />
-                    <MenuItem Header="Header2" />
-                    <MenuItem Header="Header2" />
+                <MenuItem Height="29" Header="菜单">
+                    <MenuItem Header="子菜单-1" />
+                    <MenuItem Header="子菜单-2" />
+                    <MenuItem Header="子菜单-2" />
                 </MenuItem>
             </Menu>
+
         </StackPanel>
     </hc:Window.NonClientAreaContent>
     <Border Background="{StaticResource CloudDrawingBrush}">

@@ -8,6 +8,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Avatar\avatar1.png" />
+	  <None Remove="Resources\Avatar\avatar2.png" />
+	  <None Remove="Resources\Avatar\avatar3.png" />
+	  <None Remove="Resources\Avatar\avatar4.png" />
+	  <None Remove="Resources\Avatar\avatar5.png" />
+	  <None Remove="Resources\Avatar\avatar6.png" />
 	  <None Remove="Resources\cloud.png" />
 	  <None Remove="Resources\icon.ico" />
 	  <None Remove="Styles\Fonts\FluentSystemIcons-Filled.ttf" />
@@ -32,10 +38,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Resource Include="Resources\Avatar\avatar1.png" />
+	  <Resource Include="Resources\Avatar\avatar2.png" />
+	  <Resource Include="Resources\Avatar\avatar3.png" />
+	  <Resource Include="Resources\Avatar\avatar4.png" />
+	  <Resource Include="Resources\Avatar\avatar5.png" />
+	  <Resource Include="Resources\Avatar\avatar6.png" />
 	  <Resource Include="Resources\cloud.png" />
 	  <Resource Include="Resources\icon.ico" />
 	  <Resource Include="Styles\Fonts\FluentSystemIcons-Filled.ttf" />
 	  <Resource Include="Styles\Fonts\FluentSystemIcons-Regular.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\Pages\DataGridChild2Page.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="appsettings.serilog.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

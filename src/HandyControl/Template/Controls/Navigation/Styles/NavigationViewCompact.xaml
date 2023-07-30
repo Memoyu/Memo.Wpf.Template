@@ -33,33 +33,26 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-
-                            <Button
-                                x:Name="PART_BackButton"
-                                Grid.Row="0"
-                                Margin="0,5,0,5"
-                                HorizontalAlignment="Left"
-                                IsEnabled="{TemplateBinding IsBackEnabled}"
-                                Style="{StaticResource BasePaneButtonStyle}"
-                                Visibility="{TemplateBinding IsBackButtonVisible,
-                                                             Converter={StaticResource BackButtonVisibilityToVisibilityConverter}}">
-                                <controls:SymbolIcon Symbol="ArrowLeft48" />
-                            </Button>
-
-                            <Button
-                                x:Name="PART_ToggleButton"
-                                Grid.Row="1"
-                                Margin="0,0,0,5"
-                                HorizontalAlignment="Left"
-                                Style="{StaticResource BasePaneButtonStyle}"
-                                Visibility="{TemplateBinding IsPaneToggleVisible,
-                                                             Converter={StaticResource BoolToVisibilityConverter}}">
-                                <controls:SymbolIcon Symbol="LineHorizontal320" />
-                            </Button>
-
+                            <DockPanel LastChildFill="False">
+                                <Button
+                                    x:Name="PART_BackButton"
+                                    DockPanel.Dock="Left"
+                                    IsEnabled="{TemplateBinding IsBackEnabled}"
+                                    Style="{StaticResource BasePaneButtonStyle}"
+                                    Visibility="{TemplateBinding IsBackButtonVisible,
+                                                                 Converter={StaticResource BackButtonVisibilityToVisibilityConverter}}">
+                                    <controls:SymbolIcon Symbol="ArrowLeft48" />
+                                </Button>
+                                <Button
+                                    x:Name="PART_ToggleButton"
+                                    DockPanel.Dock="Right"
+                                    Style="{StaticResource BasePaneButtonStyle}"
+                                    Visibility="{TemplateBinding IsPaneToggleVisible,
+                                                                 Converter={StaticResource BoolToVisibilityConverter}}">
+                                    <controls:SymbolIcon Symbol="LineHorizontal320" />
+                                </Button>
+                            </DockPanel>
                             <!--  Pane header  -->
                             <ContentPresenter
                                 Grid.Row="2"
@@ -200,6 +193,8 @@
                 <!--<Setter TargetName="PART_AutoSuggestBoxSymbolButton" Property="Visibility" Value="Visible" />-->
                 <!--<Setter TargetName="AutoSuggestBoxContentPresenter" Property="Visibility" Value="Collapsed" />-->
                 <!--<Setter TargetName="PART_ToggleButton" Property="Content" Value="{x:Null}" />-->
+                <Setter TargetName="PART_BackButton" Property="DockPanel.Dock" Value="Top" />
+                <Setter TargetName="PART_ToggleButton" Property="DockPanel.Dock" Value="Bottom" />
             </Trigger>
             <!--<Trigger Property="AutoSuggestBox" Value="{x:Null}">
                 <Setter TargetName="PART_AutoSuggestBoxSymbolButton" Property="Visibility" Value="Collapsed" />

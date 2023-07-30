@@ -63,6 +63,8 @@ namespace HandyControl.Template
             services.AddSingleton<DashboardViewModel>();
             services.AddSingleton<DataGridPage>();
             services.AddSingleton<DataGridViewModel>();
+            services.AddSingleton<DataGridChild1Page>();
+            services.AddSingleton<DataGridChild2Page>();
             services.AddSingleton<SettingPage>();
             services.AddSingleton<SettingViewModel>();
 

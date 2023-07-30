@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using HandyControl.Template.Controls;
+using HandyControl.Template.Models;
 using HandyControl.Template.Views.Pages;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System.Collections.ObjectModel;
 
 namespace HandyControl.Template.ViewModels;
@@ -10,14 +12,17 @@ public partial class MainWindowViewModel : ObservableObject
 {
     private bool _isInitialized = false;
     private readonly ILogger _logger;
+    private AppSettings _appSettings;
 
+    [ObservableProperty] string title;
     [ObservableProperty] ObservableCollection<object> navigationItems = new();
     [ObservableProperty] ObservableCollection<object> navigationFooter = new();
 
 
-    public MainWindowViewModel(ILoggerFactory loggerFactory)
+    public MainWindowViewModel(ILoggerFactory loggerFactory, IOptions<AppSettings> options)
     {
         _logger = loggerFactory.CreateLogger<MainWindowViewModel>();
+        _appSettings = options.Value;
         if (!_isInitialized)
             InitializeData();
     }
@@ -43,13 +48,13 @@ public partial class MainWindowViewModel : ObservableObject
                     {
                         Content = "子页面-1",
                         Icon = new SymbolIcon { Symbol = SymbolRegular.DataArea24 },
-                        TargetPageType = typeof(DataGridPage)
+                        TargetPageType = typeof(DataGridChild1Page)
                     },
                      new NavigationViewItem
                     {
                         Content = "子页面-2",
                         Icon = new SymbolIcon { Symbol = SymbolRegular.DataArea24 },
-                        TargetPageType = typeof(DataGridPage)
+                        TargetPageType = typeof(DataGridChild2Page)
                     }
                 }
 
@@ -65,6 +70,8 @@ public partial class MainWindowViewModel : ObservableObject
                 TargetPageType = typeof(SettingPage)
             }
         };
+
+        Title = _appSettings.AppName;
 
         _isInitialized = true;
     }

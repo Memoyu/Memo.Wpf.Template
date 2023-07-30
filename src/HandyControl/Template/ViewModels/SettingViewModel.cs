@@ -27,6 +27,5 @@ public class SettingViewModel : ObservableObject, INavigationAware
 
     public void OnNavigatedFrom()
     {
-        throw new System.NotImplementedException();
     }
 }

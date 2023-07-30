@@ -27,7 +27,6 @@ public partial class DashboardViewModel : ObservableObject, INavigationAware
 
     public void OnNavigatedFrom()
     {
-        throw new System.NotImplementedException();
     }
 
 }
